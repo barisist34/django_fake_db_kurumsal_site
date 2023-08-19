@@ -16,14 +16,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from page.views import home,oylesine_view,contact_us,about_us
+from page.views import  (
+    home,
+    oylesine_view,
+    contact_us,
+    vision_us,
+    about_us,
+    )
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",home),
+    path("",home,name="home"),
     path("oylesine.html",oylesine_view),
-    path("iletisim/",contact_us),
-    path("hakkimizda/",about_us),
+    path("iletisim/",contact_us,name="contact_us"),
+    path("vizyonumuz/",vision_us,name="vision_us"),
+    path("hakkimizda/",about_us,name="about_us"),
 
 ]

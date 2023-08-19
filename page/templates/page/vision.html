@@ -1,34 +1,46 @@
+
 {% extends 'base/base.html' %}
 
 {% block title %} {{page_title}} | Django Firma Demo {% endblock title %}
+
+{% comment %} <h1>extends ve block arasi h1</h1> {% endcomment %}
+{% comment %} yukaridaki satir sayfada gorunmeyecektir.... {% endcomment %}
+
+
 
 {% block container-fluid %}
 <!-- Hero content -->
 <div class="container-fluid mt-3 mb-3">
     <div class="row">
         <div class="col-sm-12 px-0">
-            <img src="https://picsum.photos/id/52/1200/300" alt="" class="w-100">
+            <img src="https://picsum.photos/id/53/1200/300" alt="" class="w-100">
         </div>
     </div>
- {% include 'page/components/hero_component.html' with hero_title=page_title %}   
 
-                
-                <!-- Hero content END -->
-                
-                <!-- About Us -->
-                
-            </div>
-            <!-- About Us END -->
-            {% endblock container-fluid %}
 
-            {% block container %}
-            <div class="container">
-                <div class="row mb-5">
-                    <div class="col-sm-8 offset-sm-2">
-                        <h2>Adresimiz</h2>
-                        <address>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae quia nisi adipisci
-                                inventore
+    {% include 'page/components/hero_component.html' with hero_title=page_title %}   
+    <!-- Hero content END -->
+    {% endblock container-fluid %}
+
+
+
+    {% block container %}
+
+    {% comment %} <h1>extends ve block arasi h1</h1> {% endcomment %}
+
+
+        <!-- About Us -->
+
+</div>
+    <!-- About Us END -->
+
+
+        <div class="row mb-5">
+            <div class="col-sm-8 offset-sm-2">
+                <h2>Adresimiz</h2>
+                <address>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae quia nisi adipisci
+                        inventore
                         eaque provident, necessitatibus itaque commodi quidem id mollitia in consequatur dolorem,
                         nesciunt
                         quaerat vero aliquam ratione et.</p>
@@ -71,6 +83,6 @@
         </div>
 
 
-    </div>
+
 
     {% endblock container %}
