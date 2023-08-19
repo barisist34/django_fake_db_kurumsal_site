@@ -14,7 +14,7 @@
     </div>
     <div class="carousel-inner">
         {% comment %} asagiya for ile carousel olusturulacak {% endcomment %}
-        {% for carousel_item in FAKE_DB_CAROUSEL  %}
+        {% for carousel_item in CAROUSEL  %}
         <div class="carousel-item {% if forloop.first %} active {% endif %} ">
             <img src="{{carousel_item}} " class="d-block w-100" alt="...">
         </div>

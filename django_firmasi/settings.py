@@ -125,8 +125,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # TASKS:
-# TODO:Anasayfayi goster
-# TODO:Hakkimizda,iletisim gibi sayfalar icin view olustur.
+# DONE:Anasayfayi goster
+# DONE:Hakkimizda,iletisim gibi sayfalar icin view olustur.
 # TODO: Django makemigration & migrate
 # TODO:DTL base.html yapisini olustur.
 # TODO:Anasayfadaki karisik yapidan kurtul.
