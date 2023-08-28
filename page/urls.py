@@ -5,6 +5,7 @@ from .views import (
     home,
     oylesine_view,
     vision_us,
+    page_view
 )
 
 
@@ -14,4 +15,5 @@ urlpatterns = [
     path("iletisim/",contact_us,name="contact_us"),
     path("vizyonumuz/",vision_us,name="vision_us"),
     path("hakkimizda/",about_us,name="about_us"),
+    path("<slug:slug>/",page_view),
 ]

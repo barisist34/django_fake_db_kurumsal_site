@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from random import randint
+from .fake_db.pages import FAKE_DB_PAGES
 
 FAKE_DB_PROJECTS= [f"https://picsum.photos/id/{id}/100/80" for id in range(21,28)]
 #8 adet resim adresi
@@ -41,3 +42,14 @@ def about_us(request):
     hero_content="        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam exercitationem excepturi molestiae libero vel praesentium in culpa recusandae, alias, quasi fuga laborum quos, repellat obcaecati provident eius aut! Sequi natus ipsam et magni amet rem omnis cupiditate alias ratione. Eligendi accusamus, consequatur dignissimos deleniti quos cupiditate eos facere! Ipsam sint repudiandae "
     context=dict(page_title=page_title,hero_content=hero_content,FAKE_DB_PROJECTS=FAKE_DB_PROJECTS)
     return render (request,"page/about_us.html",context)
+
+def page_view(request,slug):
+    result=list(filter(lambda x: x['url']==slug,FAKE_DB_PAGES))
+    if result:
+        print("*"*30)
+        print(slug)
+        print("*"*30)
+        context=dict()
+        return render (request,"page/vision.html",context)
+    else:
+        return HttpResponse("slug bulunamadi...")
