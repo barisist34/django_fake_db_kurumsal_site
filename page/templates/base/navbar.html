@@ -10,9 +10,9 @@
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link {% if request.path == "/" %}active{% endif %} " aria-current="page" href="{% url 'home' %}">Anasayfa</a>
                     {% comment %} <a class="nav-link " href="\hakkimizda\">Hakkimizda</a> {% endcomment %}
-                    <a class="nav-link {% if request.path == "/hakkimizda/" %}active{% endif %}" href="{% url 'about_us' %}">Hakkimizda</a>
-                    <a class="nav-link {% if request.path == "/vizyonumuz/" %}active{% endif %} " href="{% url 'vision_us' %}">Vizyon</a>
-                    <a class="nav-link {% if request.path == "/iletisim/" %}active{% endif %} " href="{% url 'contact_us' %}">İletisim</a>
+                    <a class="nav-link {% if request.path == "/hakkimizda/" %}active{% endif %}" href="/hakkimizda/">Hakkimizda</a>
+                    <a class="nav-link {% if request.path == "/vizyonumuz/" %}active{% endif %} " href="/vizyonumuz/">Vizyon</a>
+                    <a class="nav-link {% if request.path == "/iletisim/" %}active{% endif %} " href="/iletisim/">İletisim</a>
                 </div>
             </div>
         </div>
