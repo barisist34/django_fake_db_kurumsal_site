@@ -6,5 +6,10 @@
 
 
 {% block container %}
-{{products}}
+<div class="row row-cols-lg-3 row-cols-2 my-3">
+    {% for item in products %}
+    {% include 'product/components/card.html' with title=item.title detail=item.detail img_url=item.url url=item.id %}
+    {% endfor %}
+
+</div>
 {% endblock container %}

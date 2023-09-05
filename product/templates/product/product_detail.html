@@ -6,5 +6,6 @@
 
 
 {% block container %}
-{{detail|safe}}
+{{product_detail}}
+{% include 'product/components/card.html' with title=product_detail.title detail=product_detail.detail img_url=product_detail.url url=product_detail.id %}
 {% endblock container %}
