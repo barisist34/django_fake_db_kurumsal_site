@@ -17,7 +17,7 @@ def home(request):
     hero_content="        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam exercitationem excepturi molestiae libero vel praesentium in culpa recusandae, alias, quasi fuga laborum quos, repellat obcaecati provident eius aut! Sequi natus ipsam et magni amet rem omnis cupiditate alias ratione. Eligendi accusamus, consequatur dignissimos deleniti quos cupiditate eos facere! Ipsam sint repudiandae "
     # context={"platform":f"Django platformu kullanildi,randint donen veri: {randint(1,100)}"}
     context=dict(page_title=page_title,hero_content=hero_content,FAKE_DB_CAROUSEL=FAKE_DB_CAROUSEL)
-    context['FAKE_DB_PROJECTS']=FAKE_DB_PROJECTS
+    context['FAKE_DB_PROJECTS']=FAKE_DB_PROJECTS   #context_processors de aktif edildi,burada iptal
     #context={}
     return render(request,"page/home_page.html",context)
     #return HttpResponse("baris")
@@ -56,7 +56,7 @@ def page_view(request,slug):
         print("*"*30)
         context=dict(
             page_title=result[0]['page_title'],
-            FAKE_DB_PROJECTS=FAKE_DB_PROJECTS,
+            #FAKE_DB_PROJECTS=FAKE_DB_PROJECTS,  #context_processors de aktif edildi,burada iptal
             detail=result[0]['detail'],
             
         )
