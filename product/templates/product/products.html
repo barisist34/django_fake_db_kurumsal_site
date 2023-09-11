@@ -1,4 +1,4 @@
-{% extends 'base/base.html' %}
+{% extends 'core/base.html' %}
 
 {% block title %} {{page_title}} | Django Firma Demo {% endblock title %}
 
@@ -8,7 +8,7 @@
 {% block container %}
 <div class="row row-cols-lg-3 row-cols-2 my-3">
     {% for item in products %}
-    {% include 'products/components/card.html' with title=item.title detail=item.detail img_url=item.url url=item.id %}
+    {% include 'product/components/card.html' with title=item.title detail=item.detail img_url=item.url url=item.id %}
     {% endfor %}
 
 </div>

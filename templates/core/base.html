@@ -13,7 +13,7 @@
 
     {% comment %} base.html de NAV ve FOOTER var sablon olarak {% endcomment %}
     {% comment %} {% include 'navbar.html' %} {% endcomment %}
-    {% include 'base/navbar.html' %}
+    {% include 'core/navbar.html' %}
 
     {% block container-fluid %}    
     {% endblock container-fluid %}
@@ -23,11 +23,11 @@
     {% endblock container %}
  {% comment %} diger sayfalardaki farkli icerik buradan eklenecek. {% endcomment %}
         {% comment %} {% include 'base/projects.html' %} {% endcomment %}
-        {% include 'base/projects.html' %}
+        {% include 'core/projects.html' %}
        
  </div>
     {% comment %} {% include 'footer.html' %} {% endcomment %}
-    {% include 'base/footer.html' %}
+    {% include 'core/footer.html' %}
 
     <script src="{% static 'js/5.2.3_dist_js_bootstrap.bundle.min.js' %}" crossorigin="anonymous"></script>
 </body>
